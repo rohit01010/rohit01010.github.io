@@ -426,16 +426,16 @@ section:nth-child(even) {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); */
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.skills__section .iconBox .icons span:hover {
+/* .skills__section .iconBox .icons span:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
-}
+} */
 .skills__section .iconBox .icons span img {
   width: 100%;
   height: 100%;
