@@ -2,17 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: "Poppins";
 }
 div a img {
   width: 0;
 }
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 body {
   background-color: #2d2e32;
   scroll-behavior: smooth;
+  width: 100%;
 }
 header {
   display: flex;
@@ -55,6 +57,7 @@ nav ul {
   flex: 0.7;
 }
 nav ul li a {
+  width: 80px;
   text-decoration: none;
   color: #fff;
   margin: 0 15px;
@@ -62,18 +65,18 @@ nav ul li a {
   align-items: center;
 }
 nav ul li a::before {
-  content: "   ";
-  margin-right: 3px;
+  content: "";
+  position: absolute;
+  margin-left: -12px;
 }
 nav ul li a::after {
-  content: "    ";
-  margin-left: 3px;
+  content: "";
+  margin-left: 10px;
 }
 nav ul li a.active,
 nav ul li a:hover {
   text-decoration: none;
   color: #23be5b;
-  margin: 0 5px;
   display: flex;
   align-items: center;
 }
@@ -97,6 +100,12 @@ nav div a {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
+}
+nav div a:nth-child(1):hover {
+  color: #0e76a8;
+}
+nav div a:nth-child(2):hover {
+  color: #000;
 }
 nav div .blackBtn {
   color: #23be5b;
@@ -152,7 +161,7 @@ section:nth-child(even) {
   line-height: 50px;
 }
 .hero__section .ContentBox p {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #999;
@@ -298,7 +307,7 @@ section:nth-child(even) {
   flex: 0.7;
 }
 .about__section .cardBox .card .contentBox p {
-  font-size: 12px;
+  font-size: 13px;
   word-spacing: 3px;
   margin: 15px 0;
 }
@@ -328,7 +337,7 @@ section:nth-child(even) {
   margin: 20px 0;
 }
 .about__section .contentBox p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   word-spacing: 7px;
   color: #ddd;
@@ -442,6 +451,8 @@ section:nth-child(even) {
   object-fit: contain;
 }
 #work {
+  width: 100%;
+  overflow-x: hidden;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -492,7 +503,7 @@ section:nth-child(even) {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 20px 20px 25px 5px rgb(0 0 0 / 40%);
   overflow: hidden;
 }
 .works__section .Boxes .Box .contentBox {
@@ -709,19 +720,33 @@ footer {
   nav ul.active {
     transform: translateY(0);
   }
+  nav ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   nav ul li a {
+    position: relative;
     text-decoration: none;
     color: #fff;
     margin: 20px 0;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 23px;
+  }
+  nav ul li a::before,
+  nav ul li a::after {
+    position: relative;
+    left: 0;
   }
   nav ul li a.active,
   nav ul li a:hover {
     text-decoration: none;
     color: #23be5b;
     margin: 20px 0;
+    margin-left: -3%;
     display: flex;
     align-items: center;
   }

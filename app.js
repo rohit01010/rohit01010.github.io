@@ -1,21 +1,10 @@
 AOS.init();
 
-VanillaTilt.init(document.querySelectorAll(".Box"), {
-  max: 15,
-  speed: 1500,
-  gyroscope: true,
-  glare: true,
-  "max-glare": 0.2,
-  transition: true,
-  perspective: 900,
-});
-
 $("document").ready(function () {
   $(".navItem").click(function () {
     $(".navItem").removeClass("active");
     $(this).addClass("active");
     menuPopup();
-    // console.log("click");
   });
 });
 
@@ -66,6 +55,10 @@ let observerTemp = new IntersectionObserver(navCheck, opt);
 observerTemp.observe(workSection);
 
 const loader = document.querySelector(".preloader");
+
+setTimeout(() => {
+  preloader();
+}, 5000);
 
 function preloader() {
   loader.style.transform = "translateY(-140vh)";
