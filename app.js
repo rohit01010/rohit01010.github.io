@@ -38,7 +38,7 @@ function createBubble() {
     hero_logoBox_elem.style.left = Math.floor(Math.random() * 2)
       ? Math.random() * 150 + "px"
       : Math.random() * 150 + 380 + "px";
-    hero_logoBox_elem.style.animationDuration = Math.random() * 4 + 5 + "s";
+    hero_logoBox_elem.style.animationDuration = Math.random() * 4 + 4 + "s";
   }
   hero_logoBox_elem.style.zIndex = 0;
   hero_logoBox_elem.querySelector("i").style.fontSize =
@@ -57,7 +57,7 @@ function createBubble() {
   }, hero_logoBox_elem.style.animationDuration.split("s")[0] * 1000);
 }
 
-setInterval(createBubble, 400);
+setInterval(createBubble, 650);
 
 $("document").ready(function () {
   $(".navItem").click(function () {
