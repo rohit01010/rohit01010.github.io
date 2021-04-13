@@ -202,76 +202,38 @@ section:nth-child(even) {
   width: 300px;
   top: 80px;
   z-index: 2;
+  user-select: none;
 }
 .hero__section .ImgBox .blackBack {
-  width: fit-content;
   border-radius: 50%;
   background-color: #222;
-  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  bottom: -100px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
   z-index: 3;
-  animation: animate calc(var(--i) * 1.5s) linear infinite;
-  animation-delay: calc(var(--i) * 0.5s);
+  animation: animate 5s linear infinite;
+  transition: 0.2s;
+  cursor: pointer;
 }
-@keyframes animate {
-  0%,
-  100% {
-    transform: translate(0px, 10px);
-  }
-  50% {
-    transform: translate(10px, 0px);
-  }
+.hero__section .ImgBox .blackBack:hover {
+  background-color: #111;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3), 0 0px 80px rgba(0, 0, 0, 0.1),
+    0 0px 120px rgba(0, 0, 0, 0.05), 0px 0px 200px rgba(0, 0, 0, 0.01);
 }
 .hero__section .ImgBox .blackBack i {
-  font-size: 50px;
+  font-size: 60px;
 }
-.hero__section .ImgBox .blackBack:nth-child(1) {
-  bottom: 50px;
-  right: 100px;
-  padding: 20px 25px;
-  color: #23be5b;
-}
-.hero__section .ImgBox .blackBack:nth-child(1) i {
-  font-size: 55px;
-}
-.hero__section .ImgBox .blackBack:nth-child(2) {
-  bottom: 110px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  left: 80px;
-  color: #61dbfb;
-}
-.hero__section .ImgBox .blackBack:nth-child(3) {
-  top: 120px;
-  right: 150px;
-  padding: 12px 14px;
-  color: #d6254e;
-}
-.hero__section .ImgBox .blackBack:nth-child(3) i {
-  font-size: 25px;
-}
-.hero__section .ImgBox .blackBack:nth-child(4) {
-  color: #f86d09;
-  padding: 11px 20px 15px 20px;
-  top: 50px;
-  left: 70px;
-}
-.hero__section .ImgBox .blackBack:nth-child(4) i {
-  font-size: 40px;
-  top: 5px;
-  position: relative;
-}
-.hero__section .ImgBox .blackBack:nth-child(5) {
-  top: 80px;
-  right: 100px;
-  padding: 12px;
-}
-.hero__section .ImgBox .blackBack:nth-child(6) {
-  bottom: 170px;
-  right: 60px;
-  padding: 5px;
-  background-color: #23be5b;
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-550px);
+  }
 }
 .about__section {
   display: flex;
